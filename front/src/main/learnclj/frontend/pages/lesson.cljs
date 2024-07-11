@@ -28,7 +28,7 @@
 
                               (swap! state assoc :lesson lesson)))))
 
-(defn get-tasks [id] (go (let [response (<! (http/get (str api-root "/api/tasks/by-lesson/" id)
+(defn get-tasks [id] (go (let [response (<! (http/get (str api-root "/tasks/by-lesson/" id)
                                                       {:with-credentials? false}))]
                            (let [response-body (parse-response response)]
                              (swap! state assoc :tasks response-body)))))
@@ -60,9 +60,7 @@
           [:div
            [:h1 "Tasks"]
            [:h3 (:name (first (:tasks @state)))]
-           (task-component (first (:tasks @state)))
-           ;(if (second (:tasks @state)) (task-window (second (:tasks @state))))
-           ]
+           (task-component (first (:tasks @state)))]           
           [:div])
 
         (if (> (:id (:lesson @state)) 1) [:button {:class "light-btn lesson-nav-btn-prev" :on-click #(nav-prev)} "<- previous lesson"])
