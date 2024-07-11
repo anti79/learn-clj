@@ -1,0 +1,259 @@
+body{
+    margin:40px auto;
+	
+    line-height:1.6;
+    font-size:18px;
+    color:#444;
+	background-color: #F0F0F0;
+    max-width:80%;  
+    padding:10px}
+
+.footer {
+	height: 150px;
+}
+
+.root {
+	margin-bottom: 40px;
+}
+
+h1,h2,h3
+    {line-height:1.2}
+
+.panes {
+	display:flex;
+	flex-direction: row;
+	gap:10px;
+}
+.panes > * {
+	flex:1;
+	position:relative;
+
+}
+textarea {
+	resize: none;
+  height: 100%; /* Match the height of the container */
+  width: 100%;
+  height:300px;
+  font-size: 18px;
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  margin: 0; /* Ensure no margin is adding extra width */
+  padding: 10px; /* Add padding if needed */
+}
+
+.textarea-container {
+	position:relative;
+}
+
+.eval-btn {
+	position: absolute;
+	bottom: 20px; 
+	right: 10px; 
+	width: 50px; 
+	height: 50px;
+	background-color: green;
+	border: none;
+	border-radius: 50%;
+	color: white;
+	font-size: 24px;
+	text-align: center;
+	line-height: 50px; 
+	cursor: pointer;
+  }
+
+.eval-btn:hover {
+	background-color: rgb(0, 94, 0);
+  }
+  
+  .eval-btn:before {
+	content: '▶'; 
+  }
+
+
+  .clj-green {
+	color:#63b32e;
+  }
+  .clj-blue {
+	color: #5782d9;
+  }
+
+.test-list {
+	padding-left: 0;
+	margin: 0;
+}
+
+.test-list li {
+	display:block;
+	text-decoration: none;
+	list-style: none;
+	border:1px solid gray;
+	padding: 0.7%;
+	margin: 1px;
+}
+
+.green {
+	background-color:#b9ff8a;
+}
+.red {
+	background-color: rgb(255, 131, 131);
+}
+.yellow {
+	background-color: rgb(255, 255, 160);
+}
+.yellow:after {
+	content:"⚠";
+	float:right;
+	font-size: larger;
+	margin-top: -2px;
+}
+.green:after {
+	content:"✔";
+	float:right;
+	font-size: larger;
+	margin-top: -2px;
+}
+.red:after {
+	content:"✖";
+	float:right;
+	font-size: larger;
+	margin-top: -2px;
+}
+.bold {
+	font-weight: bold;
+}
+
+.top-menu {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #333;
+  }
+
+ .top-menu li {
+	float: left;
+  }
+  
+  .top-menu li a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+  }
+  
+
+  .top-menu li a:hover:before {
+	content: "(";
+  }
+
+  .top-menu li a:hover:after {
+	content: ")";
+  }
+
+  a {
+	text-decoration: underline dotted;
+	color: black;
+  }
+
+  
+
+  a:visited { 
+	color: black;
+   }
+
+   a:hover {
+	color: #63b32e;
+
+  }
+
+  .lesson-list {
+	list-style-type: "=> ";
+  }
+
+
+  .var1 {
+	color:#800;
+	font-weight: bold;
+
+  }
+  .var2 {
+	color: blue;
+	font-weight: bold;
+  }
+
+  .light-btn {
+	margin-top: 10px;
+	border: none;
+	padding: 10px;
+	font-size: large;
+  }
+
+  .lesson-nav-btn-prev {
+	float:left;
+  }
+
+  .lesson-nav-btn-next {
+	float:right;
+  }
+
+  .solution-btn {
+	border:none;
+	text-decoration: underline dotted;
+	border-radius: 2px;
+  }
+  .right-btns {
+	float:right;
+	display: flex;
+	gap: 10px;
+  }
+
+  .complete {
+	background-color: green;
+  }
+
+  .highlighted-code {
+	top:0 !important; /*patch*/
+	left:0 !important;
+  }
+
+  .spinny {
+	animation-name: spin;
+	animation-duration: 5000ms;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear; 
+	transform-origin: center;
+	-webkit-animation: spin 2s linear infinite;
+    animation: spin 7s linear infinite;
+  }
+  
+  
+  @keyframes spin {
+	0% { rotate: 0deg; }
+	100% { rotate: 359deg; }
+  }
+
+.badge {
+	display: inline-block;
+  padding: .35em .65em;
+  font-size: .75em;
+  font-weight: 700;
+  background-color: #63b32e;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: .25rem;
+}
+
+.solved-message {
+	font-size: larger;
+}
+
+meter {
+	width: 400px;
+	background-color: #63b32e;
+	border: 1px solid gray;
+	margin-left: 5px;
+	margin-right: 15px;
+}
