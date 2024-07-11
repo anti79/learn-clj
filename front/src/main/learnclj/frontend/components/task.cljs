@@ -64,7 +64,7 @@
          (str "Test " (inc (.indexOf (:tests @state) test))
               (cond
                 (= (:status test) "error") (str " - Error: \"" (:message test) "\"")
-                (= (:status test) "pass") (str " - Passed: " (js->clj (:env test) :keywordize-keys true))
+                (= (:status test) "pass") (str " - Passed: " (js->clj (:env test) :keywordize-keys true) ". Output: " (:output test))
                 (= (:status test) "fail") " - Failed"))])
       (:tests @state))
      (if
